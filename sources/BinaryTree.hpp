@@ -96,8 +96,8 @@ namespace ariel
         postorder_iterator<T> begin_postorder() {return postorder_iterator<T>{root};}
         postorder_iterator<T> end_postorder() {return postorder_iterator<T>{};}
 
-        inorder_iterator<T> begin() {return inorder_iterator<T>{root};}
-        inorder_iterator<T> end() {return inorder_iterator<T>{};}
+        inorder_iterator<T> begin() {return this->begin_inorder();}
+        inorder_iterator<T> end() {return this->end_inorder();}
 
         friend std::ostream& operator << (std::ostream& os, const BinaryTree<T>& tree);
 
